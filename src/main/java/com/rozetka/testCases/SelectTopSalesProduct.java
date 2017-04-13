@@ -21,7 +21,9 @@ public class SelectTopSalesProduct extends AbstractTestCase {
     @Test(groups = {"selectTopSaleProduct"})
     public void testSelectTopSalesProduct() throws IOException {
         final String testCaseName = "Select top sales product";
-        final String subCategoryName = "SmartPhones";
+        final String categoryName = "Phones, TV and Electronics";
+        final String subCategoryFirstLevelName = "Phones";
+        final String subCategorySecondLevelName = "SmartPhones";
         final int pagesQtyForCheckingProduct = 3;
 
         status = Status.OK;
@@ -34,10 +36,12 @@ public class SelectTopSalesProduct extends AbstractTestCase {
             action.loadPage(HOSTER_URL);
             logger.stepInfo("Load " + HOSTER_URL);
 
-            pageActions.navigateToSubCategory(resource.get(CATEGORIES, "smartponesTvAndElectronics"), resource.get(CATEGORIES, "subCategorySmartphones"), subCategoryName);
+            pageActions.navigateToCategory(resource.get(CATEGORIES, "smartponesTvAndElectronics"), categoryName);
+            pageActions.navigateToCategory(resource.get(CATEGORIES, "firstLevelSubCategoryPhones"), subCategoryFirstLevelName);
+            pageActions.navigateToCategory(resource.get(CATEGORIES, "subCategorySmartphones"), subCategorySecondLevelName);
 
             // -- check that Smartphones category is loaded (check current url), if no - break test;
-            if (!pageActions.checkIfCategoryIsLoaded(resource.get(URL, "smartPhoneCategory"), subCategoryName)) {
+            if (!pageActions.checkIfCategoryIsLoaded(resource.get(URL, "smartPhoneCategory"), subCategorySecondLevelName)) {
                 throw new Exception();
             } else {
                 //else check if title of subcategory is present

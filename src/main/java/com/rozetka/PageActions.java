@@ -17,12 +17,11 @@ public class PageActions {
         this.logger = logger;
     }
 
-    public void navigateToSubCategory(String categoryXpath, String subCategoryXpath, String subCategoryName) {
+    public void navigateToCategory(String categoryXpath, String categoryName) {
         action.click(categoryXpath);
-        action.click(subCategoryXpath);
         Delay.midDelay();
 
-        logger.stepInfo("navigateTo", "Navigate to " + subCategoryName);
+        logger.stepInfo("navigateTo", "Navigate to " + categoryName);
     }
 
     public boolean checkIfCategoryIsLoaded(String categoryUrl, String categoryName) {
