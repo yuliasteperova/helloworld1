@@ -1,0 +1,7 @@
+{
+    "smartPhoneCategoryTitle": "//h1[@itemprop='name'][contains(text(),'Все смартфоны')]",
+    "productsWithTopSalesLabel": "//div[@class='g-i-tile g-i-tile-catalog']//i[contains(@class,'icon-middle-popularity')]",
+    "topSalesProductLink": "//i[contains(@class,'icon-middle-popularity')]/ancestor::div[@class='g-i-tile-i-box-desc']//div[4]//a",
+    "topSalesProductName": "//i[contains(@class,'icon-middle-popularity')]/ancestor::div[@class='g-i-tile-i-box-desc']//div[4]//a",
+    "topSalesProductPrice": "//i[contains(@class,'icon-middle-popularity')]/ancestor::div[@class='g-i-tile-i-box-desc']//div[@class='g-price-uah']"
+}
