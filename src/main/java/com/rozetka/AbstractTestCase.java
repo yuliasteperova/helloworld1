@@ -30,7 +30,7 @@ public abstract class AbstractTestCase {
 
     @BeforeSuite
     public void createFile() throws IOException {
-        FILE = new File("/root/autotests/rozetkaTests/testResults.txt");
+        FILE = new File("/root/autotests/siteTests/testResults.txt");
         WRITER = new FileWriter(FILE);
         WRITER.append("<table border=1>");
     }
