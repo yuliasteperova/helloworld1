@@ -1,0 +1,5 @@
+{
+    "smartponesTvAndElectronics": "//nav[@class='m-main']//div/ul/li/a[contains(.,'Смартфоны')]",
+    "firstLevelSubCategoryPhones": "//h4[@class='m-cat-l-i-title']//a[text()='Телефоны']",
+    "subCategorySmartphones": "//li/div/a[text()='Смартфоны']"
+}
