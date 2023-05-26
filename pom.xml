@@ -15,7 +15,8 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.1</version>
+                <version>3.11.0</version>
+                <type>maven-plugin</type>
                 <configuration>
                     <encoding>${project.build.sourceEncoding}</encoding>
                     <source>${jdk.version}</source>
@@ -36,7 +37,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
-                <version>2.6</version>
+                <version>3.3.1</version>
             </plugin>
         </plugins>
         <resources>
